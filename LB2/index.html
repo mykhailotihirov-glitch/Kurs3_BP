@@ -6,7 +6,7 @@
   <title>Лабораторка 2</title>
 
   <!-- Внутрішній -->
-  <style  type="text/css">
+  <style>
     body {
       background-color: white;
     }
@@ -15,7 +15,7 @@
       color: darkblue;
       margin-bottom: 10px;
     }
-    min::selection {
+    .min::selection {
       color: rgb(41, 255, 219);
       background: #c847e2;
     }
@@ -40,8 +40,8 @@
 
   <h2>Це приклад внутрішнього підключення</h2>
 
-  <ah2>Це приклад зовнішнього підключення</ah2>
-  <k>Це текст</k>
+  <span class = "pid">Це приклад зовнішнього підключення</span>
+  <span class = "tex">Це текст</span>
 
   <hr>
 
@@ -50,10 +50,8 @@
   <div>
     <p>Це звичайний абзац усередині div.</p>
     <p class="important">А це абзац з класом important.</p>
-    <d id="onlyk">А цей абзац має id="onlyk"</d>
-    <br>
-    <br>
-    <min> При виділенні цього тексту він змінить колір.</min>
+    <p id="onlyk">А цей абзац має id="onlyk"</p>
+    <span class = "min"> При виділенні цього тексту він змінить колір.</min>
   </div>
 
   <hr>

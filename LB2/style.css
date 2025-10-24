@@ -7,12 +7,12 @@ body {
 }
 
 /* Заголовки, посилання */
-ah2 {
+.pid {
   color: #99b111;
   font-size: 18px;
   margin-bottom: 10px;
 }
-k {
+.tex {
   color: rgb(0, 130, 139);
   display: block;
   font-size: 16px;
