@@ -1,11 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Test</title>
-    </head>
-    <body>
-        tybick
-    </body>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторка 2</title>
+
+  <!-- Внутрішній -->
+  <style  type="text/css">
+    body {
+      background-color: white;
+    }
+
+    h2 {
+      color: darkblue;
+      margin-bottom: 10px;
+    }
+    min::selection {
+      color: rgb(41, 255, 219);
+      background: #c847e2;
+    }
+    div#onlyk {
+      color: rgb(103, 0, 172);
+      font-weight: bold;
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 style="text-align:center;">Лабораторна робота №2 - Варіант 0</h1>
+
+  <hr>
+
+  <h3>Завдання 1. Демонстрація трьох способів підключення CSS</h3>
+
+  <h1 style="font-size: 20px; color: rgb(255, 0, 0);">Це приклад inline-стилю</h1>
+
+  <h2>Це приклад внутрішнього підключення</h2>
+
+  <ah2>Це приклад зовнішнього підключення</ah2>
+  <k>Це текст</k>
+
+  <hr>
+
+  <h3>Завдання 2. Використання селекторів тегів, класів та ідентифікаторів</h3>
+  
+  <div>
+    <p>Це звичайний абзац усередині div.</p>
+    <p class="important">А це абзац з класом important.</p>
+    <d id="onlyk">А цей абзац має id="onlyk"</d>
+    <br>
+    <br>
+    <min> При виділенні цього тексту він змінить колір.</min>
+  </div>
+
+  <hr>
+
+  <h3>Завдання 3. Використання властивості float</h3>
+
+  <div class="float-example">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/200px-PNG_transparency_demonstration_1.png"
+      alt="Приклад" class="float-image">
+    <p>
+      Це приклад використання властивості <b>float</b>.<br>
+      |<br>
+      |<br>
+      |<br>
+      |<br>
+      |<br>
+      Обтикання здається робиться так
+    </p>
+  </div>
+
+  <hr>
+
+  <h3>Завдання 4. Використання властивості position</h3>
+
+  <div class="relative-box">
+    <p>Це <b>position: relative</b> — блок  зсунений вправо та трохи вниз</p>
+  </div>
+
+  <hr>
+
+  <h3>Завдання 5. Елемент з вкладками </h3>
+
+  <div class="tabs">
+    <div class="tab-buttons">
+      <button class="tab-btn" onclick="openTab(event, 'tab1')">Вкладка 1</button>
+      <button class="tab-btn active" onclick="openTab(event, 'tab2')">Вкладка 2</button>
+      <button class="tab-btn" onclick="openTab(event, 'tab3')">Вкладка 3</button>
+    </div>
+
+    <div id="tab1" class="tab-content">
+      <h3>sample content 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    </div>
+
+    <div id="tab2" class="tab-content active">
+      <h3>sample content 2</h3>
+      <p>Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum</p>
+    </div>
+
+    <div id="tab3" class="tab-content">
+      <h3>sample content 3</h3>
+      <p>Vivamus nec mauris id est vehicula elementum</p>
+    </div>
+  </div>
+
+  <!-- Вкладки -->
+  <script>
+    function openTab(evt, tabName) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabName).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
 </html>
