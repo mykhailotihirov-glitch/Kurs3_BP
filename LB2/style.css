@@ -41,8 +41,6 @@ font-weight:bold; color:red;
   width: 305px;
 }
 
-/* ===== Завдання 5 — кастомні кольорові radio ===== */
-
 .radio {
   display: inline-flex;
   align-items: center;
@@ -52,27 +50,22 @@ font-weight:bold; color:red;
   user-select: none;
 }
 
-/* Ховаємо стандартну крапку radio */
 .radio input[type="radio"] {
   display: none;
 }
 
-/* Базовий зовнішній кружок */
 .custom-radio {
   width: 18px;
   height: 18px;
   border: 2px solid black;
   border-radius: 50%;
   margin-right: 8px;
-  transition: 0.3s;
-  position: relative;
   background: white;
 }
 
-/* Коли вибрано — заповнюється кольором */
+/* Заповнення кольором */
 .radio.red input[type="radio"]:checked + .custom-radio {
   background: red;
-
 }
 .radio.green input[type="radio"]:checked + .custom-radio {
   background: green;
@@ -84,7 +77,6 @@ font-weight:bold; color:red;
 .flex-container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   background: gray;
   padding: 20px;
 }
@@ -99,11 +91,25 @@ font-weight:bold; color:red;
   font-weight: bold;
 }
 
-.flex-item.green { background: green; }
-.flex-item.blue { background: blue; }
-.flex-item.red { background: red; }
+.flex-item.green {
+   background: green; 
+  }
+.flex-item.blue {
+   background: blue; 
+  }
+.flex-item.red { 
+  background: red; 
+}
 
-.flex-item:nth-child(1) { order: 3; }
-.flex-item:nth-child(2) { order: 4; }
-.flex-item:nth-child(3) { order: 1; }
-.flex-item:nth-child(4) { order: 2; }
+.flex-item:nth-child(1) {
+   order: 3; 
+  }
+.flex-item:nth-child(2) {
+   order: 4; 
+  }
+.flex-item:nth-child(3) {
+   order: 1; 
+  }
+.flex-item:nth-child(4) {
+   order: 2; 
+  }
