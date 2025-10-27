@@ -41,49 +41,69 @@ font-weight:bold; color:red;
   width: 305px;
 }
 
-/* Вкладки */
-.tabs {
-  width: 400px;
-  margin-top: 20px;
-}
+/* ===== Завдання 5 — кастомні кольорові radio ===== */
 
-/* Кнопки вкладок */
-.tab-buttons {
-  display: flex;
-  border-bottom: 1px solid #ccc;
-}
-.tab-btn {
-  background: none;
-  border: none;
-  padding: 4px 8px;
+.radio {
+  display: inline-flex;
+  align-items: center;
+  margin: 10px;
   cursor: pointer;
-  font-family: "Times New Roman", serif;
   font-size: 16px;
-  color: black;
-}
-.tab-btn:hover {
-  background-color: black;
-  color: white;
-}
-.tab-btn.active {
-  background-color: black;
-  color: white;
+  user-select: none;
 }
 
-/* Контент вкладки */
-.tab-content {
+/* Ховаємо стандартну крапку radio */
+.radio input[type="radio"] {
   display: none;
-  padding: 5px 0;
-  text-align: left;
 }
-.tab-content.active {
-  display: block;
+
+/* Базовий зовнішній кружок */
+.custom-radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-right: 8px;
+  transition: 0.3s;
+  position: relative;
+  background: white;
 }
-.tab-content h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
+
+/* Коли вибрано — заповнюється кольором */
+.radio.red input[type="radio"]:checked + .custom-radio {
+  background: red;
+
 }
-.tab-content p {
-  font-size: 15px;
-  line-height: 1.2;
+.radio.green input[type="radio"]:checked + .custom-radio {
+  background: green;
 }
+.radio.blue input[type="radio"]:checked + .custom-radio {
+  background: blue;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: gray;
+  padding: 20px;
+}
+
+.flex-item {
+  width: 60px;
+  height: 60px;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.flex-item.green { background: green; }
+.flex-item.blue { background: blue; }
+.flex-item.red { background: red; }
+
+.flex-item:nth-child(1) { order: 3; }
+.flex-item:nth-child(2) { order: 4; }
+.flex-item:nth-child(3) { order: 1; }
+.flex-item:nth-child(4) { order: 2; }

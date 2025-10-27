@@ -19,7 +19,7 @@
       color: rgb(41, 255, 219);
       background: #c847e2;
     }
-    #onlyk {
+    #onlk {
       color: rgb(103, 0, 172);
       font-weight: bold;
     }
@@ -83,28 +83,31 @@
 
   <h3>Завдання 5</h3>
 
-  <div class="tabs">
-    <div class="tab-buttons">
-      <button class="tab-btn" onclick="openTab(event, 'tab1')">Вкладка 1</button>
-      <button class="tab-btn active" onclick="openTab(event, 'tab2')">Вкладка 2</button>
-      <button class="tab-btn" onclick="openTab(event, 'tab3')">Вкладка 3</button>
-    </div>
+<div class="radio-section">
+  <label class="radio red">
+    <input type="radio" name="color" value="red">
+    <span class="custom-radio"></span> Червоний
+  </label>
 
-    <div id="tab1" class="tab-content">
-      <h3>sample content 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-    </div>
+  <label class="radio green">
+    <input type="radio" name="color" value="green">
+    <span class="custom-radio"></span> Зелений
+  </label>
 
-    <div id="tab2" class="tab-content active">
-      <h3>sample content 2</h3>
-      <p>Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum</p>
-    </div>
+  <label class="radio blue">
+    <input type="radio" name="color" value="blue">
+    <span class="custom-radio"></span> Синій
+  </label>
+</div>
 
-    <div id="tab3" class="tab-content">
-      <h3>sample content 3</h3>
-      <p>Vivamus nec mauris id est vehicula elementum</p>
-    </div>
-  </div>
+<hr>
+
+<div class="flex-container">
+  <div class="flex-item green">1</div>
+  <div class="flex-item blue">2</div>
+  <div class="flex-item blue">3</div>
+  <div class="flex-item red">4</div>
+</div>
 
 </body>
 </html>
