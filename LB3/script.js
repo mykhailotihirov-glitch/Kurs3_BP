@@ -1,6 +1,6 @@
-// Дані для генерації
-const names = ["Олег", "Марія", "Аня", "Ігор", "Оксана", "Тарас"];
-const cities = ["Київ", "Одеса", "Львів", "Харків", "Дніпро", "Вінниця"];
+// Масиви для генерації
+const names = ["Іван", "Марія", "Аня", "Петро", "Оксана", "Тарас"];
+const cities = ["Харків", "Київ", "Одеса", "Львів", "Дніпро", "Вінниця"];
 
 let counter = 1;
 let timer = null;
@@ -11,7 +11,7 @@ function addRow() {
   const age = Math.floor(Math.random() * 62) + 18;
   const city = cities[Math.floor(Math.random() * cities.length)];
 // Додаємо рядок до таблиці
-  $('#tableH tbody').append(`
+  $('#tableH > tbody').append(`
     <tr>
       <td>${counter}</td>
       <td>${name}</td>
@@ -23,9 +23,15 @@ function addRow() {
   counter++;
 }
 
+
 // Кнопка "Почати"
 $('#start').click(function () {
-  const interval = Number($("#interval").val());
+  const interval = Number($('#interval').val());
+
+    if (interval < 100) {
+    alert("Мінімальний інтервал — 100 мс.");
+    return;
+  }
 
   if (timer) clearInterval(timer);
   timer = setInterval(addRow, interval);
